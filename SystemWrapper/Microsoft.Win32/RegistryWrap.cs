@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 using Microsoft.Win32;
 using SystemInterface.Microsoft.Win32;
 
@@ -8,7 +9,7 @@ namespace SystemWrapper.Microsoft.Win32
     /// </summary>
     public class RegistryWrap : IRegistry
     {
-        #region Implementation of IRegistry
+#region Implementation of IRegistry
 
         /// <summary>
         /// TODO: Add Comment
@@ -135,6 +136,7 @@ namespace SystemWrapper.Microsoft.Win32
             Registry.SetValue(keyName, valueName, value, valueKind);
         }
 
-        #endregion Implementation of IRegistry
+#endregion Implementation of IRegistry
     }
 }
+#endif

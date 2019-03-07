@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 using System;
 using System.Security.AccessControl;
 using Microsoft.Win32;
@@ -517,3 +518,4 @@ namespace SystemWrapper.Microsoft.Win32
         #endregion Implementation of IRegistryKey
     }
 }
+#endif

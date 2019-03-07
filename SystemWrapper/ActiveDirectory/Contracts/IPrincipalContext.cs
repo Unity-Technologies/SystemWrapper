@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory.Contracts
 {
     using System;
@@ -8,13 +9,14 @@ namespace SystemWrapper.ActiveDirectory.Contracts
     /// </summary>
     public interface IPrincipalContext : IDisposable
     {
-        #region Public Properties
+#region Public Properties
 
         /// <summary>
         /// 
         /// </summary>
         PrincipalContext PrincipalContextInstance { get; }
 
-        #endregion
+#endregion
     }
 }
+#endif

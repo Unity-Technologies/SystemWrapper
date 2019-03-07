@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory.Contracts
 {
     using System.DirectoryServices.AccountManagement;
@@ -7,7 +8,7 @@ namespace SystemWrapper.ActiveDirectory.Contracts
     /// </summary>
     public interface IPrincipalContextFactory
     {
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
@@ -16,6 +17,7 @@ namespace SystemWrapper.ActiveDirectory.Contracts
         IPrincipalContext Create(ContextType contextType,
                                  string name);
 
-        #endregion
+#endregion
     }
 }
+#endif

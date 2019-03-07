@@ -1,4 +1,5 @@
-﻿namespace SystemWrapper.ActiveDirectory
+#if !BUILD_MONO
+namespace SystemWrapper.ActiveDirectory
 {
     using System.DirectoryServices.AccountManagement;
 
@@ -9,7 +10,7 @@
     /// </summary>
     public class PrincipalContextFactory : IPrincipalContextFactory
     {
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
@@ -22,6 +23,7 @@
             return new PrincipalContextWrap(contextType, name);
         }
 
-        #endregion
+#endregion
     }
 }
+#endif

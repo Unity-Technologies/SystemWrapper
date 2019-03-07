@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 using NUnit.Framework;
 using Microsoft.Win32;
 using SystemWrapper.Microsoft.Win32;
@@ -57,3 +58,4 @@ namespace SystemWrapper.Tests.Microsoft.Win32
         }
     }
 }
+#endif

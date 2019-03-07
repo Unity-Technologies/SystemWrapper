@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory
 {
     using System.DirectoryServices.AccountManagement;
@@ -9,13 +10,13 @@ namespace SystemWrapper.ActiveDirectory
     /// </summary>
     public class GroupPrincipalWrap : IGroupPrincipal
     {
-        #region Fields
+#region Fields
 
         private readonly GroupPrincipal groupPrincipal;
 
-        #endregion
+#endregion
 
-        #region Constructors and Destructors
+#region Constructors and Destructors
 
         /// <summary>
         /// 
@@ -25,9 +26,9 @@ namespace SystemWrapper.ActiveDirectory
             this.groupPrincipal = groupPrincipal;
         }
 
-        #endregion
+#endregion
 
-        #region Public Properties
+#region Public Properties
 
         /// <summary>
         /// 
@@ -40,9 +41,9 @@ namespace SystemWrapper.ActiveDirectory
             }
         }
 
-        #endregion
+#endregion
 
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
@@ -64,6 +65,7 @@ namespace SystemWrapper.ActiveDirectory
             this.groupPrincipal.Save();
         }
 
-        #endregion
+#endregion
     }
 }
+#endif

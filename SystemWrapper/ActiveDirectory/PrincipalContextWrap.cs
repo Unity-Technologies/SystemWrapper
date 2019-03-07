@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory
 {
     using System;
@@ -10,13 +11,13 @@ namespace SystemWrapper.ActiveDirectory
     /// </summary>
     public class PrincipalContextWrap : IPrincipalContext
     {
-        #region Fields
+#region Fields
 
         private readonly PrincipalContext principalContext;
 
-        #endregion
+#endregion
 
-        #region Constructors and Destructors
+#region Constructors and Destructors
 
         /// <summary>
         /// 
@@ -29,9 +30,9 @@ namespace SystemWrapper.ActiveDirectory
             this.principalContext = new PrincipalContext(contextType, name);
         }
 
-        #endregion
+#endregion
 
-        #region Public Properties
+#region Public Properties
 
         /// <summary>
         /// 
@@ -44,9 +45,9 @@ namespace SystemWrapper.ActiveDirectory
             }
         }
 
-        #endregion
+#endregion
 
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
@@ -66,6 +67,7 @@ namespace SystemWrapper.ActiveDirectory
             this.principalContext.Dispose();
         }
 
-        #endregion
+#endregion
     }
 }
+#endif

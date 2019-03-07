@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory.Contracts
 {
     using System.DirectoryServices.AccountManagement;
@@ -7,7 +8,7 @@ namespace SystemWrapper.ActiveDirectory.Contracts
     /// </summary>
     public interface IPrincipalCollection
     {
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
@@ -19,6 +20,7 @@ namespace SystemWrapper.ActiveDirectory.Contracts
                  IdentityType identityType,
                  string identityValue);
 
-        #endregion
+#endregion
     }
 }
+#endif

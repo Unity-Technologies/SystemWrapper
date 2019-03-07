@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory.Contracts
 {
     /// <summary>
@@ -5,22 +6,23 @@ namespace SystemWrapper.ActiveDirectory.Contracts
     /// </summary>
     public interface IGroupPrincipal
     {
-        #region Public Properties
+#region Public Properties
 
         /// <summary>
         /// 
         /// </summary>
         IPrincipalCollection Members { get; }
 
-        #endregion
+#endregion
 
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
         /// </summary>
         void Save();
 
-        #endregion
+#endregion
     }
 }
+#endif

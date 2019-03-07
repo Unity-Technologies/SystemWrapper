@@ -1,3 +1,4 @@
+#if !BUILD_MONO
 namespace SystemWrapper.ActiveDirectory
 {
     using System.DirectoryServices.AccountManagement;
@@ -9,13 +10,13 @@ namespace SystemWrapper.ActiveDirectory
     /// </summary>
     public class PrincipalCollectionWrap : IPrincipalCollection
     {
-        #region Fields
+#region Fields
 
         private readonly PrincipalCollection principalCollection;
 
-        #endregion
+#endregion
 
-        #region Constructors and Destructors
+#region Constructors and Destructors
 
         /// <summary>
         /// 
@@ -25,9 +26,9 @@ namespace SystemWrapper.ActiveDirectory
             this.principalCollection = principalCollection;
         }
 
-        #endregion
+#endregion
 
-        #region Public Methods and Operators
+#region Public Methods and Operators
 
         /// <summary>
         /// 
@@ -42,6 +43,7 @@ namespace SystemWrapper.ActiveDirectory
             this.principalCollection.Add(context.PrincipalContextInstance, identityType, identityValue);
         }
 
-        #endregion
+#endregion
     }
 }
+#endif
